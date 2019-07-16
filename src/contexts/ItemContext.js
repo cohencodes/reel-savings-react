@@ -8,17 +8,27 @@ const ItemContextProvider = props => {
   const [items, dispatch] = useReducer(itemReducer, STORE);
   const [filteredItems, setFilteredItems] = useState(items);
 
-  const filterItems = name => {
+  const filterItems = value => {
     let filteredItems = items.filter(item => {
-      return Object.keys(item).some(key =>
-        item[key].toLowerCase().includes(name)
-      );
+      return item.name.toLowerCase().startsWith(value);
+    });
+    setFilteredItems(filteredItems);
+  };
+
+  const navFilter = value => {
+    if (value === 'Clear') {
+      return setFilteredItems(items);
+    }
+    let filteredItems = items.filter(item => {
+      return item.status.startsWith(value);
     });
     setFilteredItems(filteredItems);
   };
 
   return (
-    <ItemContext.Provider value={{ filteredItems, dispatch, filterItems }}>
+    <ItemContext.Provider
+      value={{ filteredItems, dispatch, filterItems, navFilter }}
+    >
       {props.children}
     </ItemContext.Provider>
   );

@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  padding: 20px;
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+}
+
+.active {
+  background-color: #2ecc71;
+  width: 80px;
+  padding: 5px;
+}
+
+.paused {
+  background-color: #e74c3c;
+  width: 80px;
+  padding: 5px;
+}

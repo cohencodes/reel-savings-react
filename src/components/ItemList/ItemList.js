@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { ItemContext } from '../contexts/ItemContext';
-import ItemDetail from './ItemDetail';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { ItemContext } from '../../contexts/ItemContext';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import './ItemList.css';
 
 const ItemList = () => {
   const { filteredItems } = useContext(ItemContext);
@@ -14,10 +15,10 @@ const ItemList = () => {
 
   return filteredItems.length ? (
     <div
-      className="item-list"
       style={{ color: theme.color, background: theme.ui }}
+      className="list-container"
     >
-      <ul>{itemList}</ul>
+      <ul className="item-list">{itemList}</ul>
     </div>
   ) : (
     <div className="empty">You don't have any items</div>
