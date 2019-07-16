@@ -9,8 +9,6 @@ const ThemeContextProvider = props => {
     dark: { color: '#ddd', ui: '#333', bg: '#555' }
   });
 
-  console.log(theme);
-
   const toggleTheme = () => {
     setTheme({ ...theme, isLightTheme: !theme.isLightTheme });
   };

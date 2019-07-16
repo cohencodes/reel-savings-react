@@ -1,10 +1,12 @@
 export const itemReducer = (state, action) => {
   switch (action.type) {
-    case 'ACTIVATE_ITEM':
+    case 'TOGGLE_STATUS':
       return state.map(item => {
-        // map over items in STORE and set to the opposite of previous value (Active || Paused)
+        // map over items in STORE and set to the opposite of previous value (active || paused)
         if (item.name === action.name) {
-          item.status = !item.status;
+          item.status === 'active'
+            ? (item.status = 'paused')
+            : (item.status = 'active');
         }
         return item;
       });
