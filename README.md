@@ -6,7 +6,7 @@ This is my take on a coding challenge to create the frontend UI / UX for an app 
 
 ### Screenshots
 
-![Light Mode](https://imgur.com/WUOCRdJ) ![Dark Mode](https://imgur.com/JyzNSb5)
+![Light Mode](https://imgur.com/WUOCRdJ.png) ![Dark Mode](https://imgur.com/JyzNSb5.png)
 
 #### Technologies
 
