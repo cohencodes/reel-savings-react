@@ -1,30 +1,42 @@
 import React, { useContext } from 'react';
 import { ItemContext } from '../../contexts/ItemContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 import ProgressBar from '../ProgressBar/ProgressBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ItemDetail.css';
 
 const ItemDetails = ({ item }) => {
   const { dispatch } = useContext(ItemContext);
+  const { isLightTheme, light, dark } = useContext(ThemeContext);
+  const theme = isLightTheme ? light : dark;
   return (
-    <li className="item">
-      <div className="name">{item.name}</div>
-      <img src={item.imgURL} alt={item.name} className="item-image" />
-      <div className="total">{item.total}</div>
-      <ProgressBar strokeWidth="2" sqSize="50" percentage={item.percentSaved} />
-      <button
-        onClick={() => dispatch({ type: 'TOGGLE_STATUS', name: item.name })}
-        className={item.status === 'Active' ? 'active' : 'paused'}
-      >
-        {/* set button text depending on status */}
-        {item.status === 'Active' ? 'Active' : 'Paused'}
-      </button>
-      <button
-        onClick={() => dispatch({ type: 'REMOVE_ITEM', name: item.name })}
-        className="icon-btn"
-      >
-        <FontAwesomeIcon icon="trash-alt" color="#333" size="lg" />
-      </button>
+    <li
+      style={{ backgroundColor: theme.cardbg }}
+      className={!isLightTheme ? 'dark-mode-item item' : 'item'}
+    >
+      <div className="item-info">
+        <h3 className="name">{item.name}</h3>
+        <div className="bar" />
+      </div>
+      <div className="left-col">
+        <img src={item.imgURL} alt={item.name} className="item-image" />
+      </div>
+      <div className="right-col">
+        <p className="total">{item.total}</p>
+        <ProgressBar
+          strokeWidth="8"
+          sqSize="60"
+          percentage={item.percentSaved}
+        />
+        <button
+          onClick={() => dispatch({ type: 'TOGGLE_STATUS', name: item.name })}
+          className={
+            item.status === 'Active' ? 'active status-btn' : 'paused status-btn'
+          }
+        >
+          {/* set button text depending on status */}
+          {item.status === 'Active' ? 'Active' : 'Paused'}
+        </button>
+      </div>
     </li>
   );
 };

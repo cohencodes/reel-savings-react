@@ -11,7 +11,7 @@ export const itemReducer = (state, action) => {
         return item;
       });
     case 'REMOVE_ITEM':
-      return state.filter(item => item.name !== action.name);
+      return state.filter(item => item.name === action.name);
     default:
       return state;
   }

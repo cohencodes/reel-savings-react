@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import './ProgressBar.css';
 
 class ProgressBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     // Size of the enclosing square
     const sqSize = this.props.sqSize;
@@ -65,46 +60,5 @@ ProgressBar.defaultProps = {
   percentage: 25,
   strokeWidth: 10
 };
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       percentage: 25
-//     };
-
-//     this.handleChangeEvent = this.handleChangeEvent.bind(this);
-//   }
-
-//   handleChangeEvent(event) {
-//     this.setState({
-//       percentage: event.target.value
-//     });
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <ProgressBar
-//           strokeWidth="10"
-//           sqSize="200"
-//           percentage={this.state.percentage}
-//         />
-//         <div>
-//           <input
-//             id="progressInput"
-//             type="range"
-//             min="0"
-//             max="100"
-//             step="1"
-//             value={this.state.percentage}
-//             onChange={this.handleChangeEvent}
-//           />
-//         </div>
-//       </div>
-//     );
-//   }
-// }
 
 export default ProgressBar;

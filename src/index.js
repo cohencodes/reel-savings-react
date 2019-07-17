@@ -5,27 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faSearch,
-  faStickyNote,
-  faInfoCircle,
-  faEdit,
-  faTrashAlt,
-  faPlayCircle,
-  faCheckCircle,
-  faArrowAltCircleUp
-} from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
-library.add(
-  faSearch,
-  faStickyNote,
-  faInfoCircle,
-  faEdit,
-  faTrashAlt,
-  faPlayCircle,
-  faCheckCircle,
-  faArrowAltCircleUp
-);
+library.add(faMoon, faSun, faSearch);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

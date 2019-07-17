@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "reel-savings-react",
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
+}

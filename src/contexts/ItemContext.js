@@ -16,7 +16,7 @@ const ItemContextProvider = props => {
   };
 
   const navFilter = value => {
-    if (value === 'Clear') {
+    if (value === 'All') {
       return setFilteredItems(items);
     }
     let filteredItems = items.filter(item => {
