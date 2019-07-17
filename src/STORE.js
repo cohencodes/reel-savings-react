@@ -38,19 +38,19 @@ const STORE = [
     imgURL: 'http://pngimg.com/uploads/macbook/macbook_PNG9.png'
   },
   {
+    name: 'Ferragamo Shoes',
+    status: 'Active',
+    percentSaved: 85,
+    total: '$695',
+    imgURL:
+      'https://i.pinimg.com/originals/4b/04/ee/4b04eeb029a61ba70da95fa8da2ff705.png'
+  },
+  {
     name: 'Armani Suit',
     status: 'Active',
     percentSaved: 50,
     total: '$999',
     imgURL: 'https://www.pngarts.com/files/3/Men-Suit-PNG-Image-Background.png'
-  },
-  {
-    name: 'Ferragamo Shoes',
-    status: 'Active',
-    percentSaved: 80,
-    total: '$695',
-    imgURL:
-      'https://i.pinimg.com/originals/4b/04/ee/4b04eeb029a61ba70da95fa8da2ff705.png'
   }
 ];
 

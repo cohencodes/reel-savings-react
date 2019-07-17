@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { ItemContext } from '../../contexts/ItemContext';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Emoji from '../Emoji/Emoji';
 import './ItemList.css';
 
 const ItemList = () => {
@@ -21,7 +22,9 @@ const ItemList = () => {
       <ul className="item-list">{itemList}</ul>
     </div>
   ) : (
-    <div className="empty">You don't have any items</div>
+    <div className={!isLightTheme ? 'empty empty-dark' : 'empty'}>
+      You're almost there! Keep saving <Emoji symbol="😃" />
+    </div>
   );
 };
 
