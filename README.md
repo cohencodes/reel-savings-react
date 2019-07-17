@@ -13,7 +13,7 @@ This is my take on a coding challenge to create the frontend UI / UX for an app 
 - React
 - Built with React Hooks & Context API
 - Vanilla CSS
-- FontAwesome library
+- FontAwesome Library
 
 Deployed to Zeit
 
