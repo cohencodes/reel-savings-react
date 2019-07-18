@@ -22,6 +22,8 @@ const SearchForm = () => {
       placeholder="Search items..."
       onChange={handleChange}
       className="search-input"
+      autoCapitalize="off"
+      autoCorrect="off"
       style={{ background: theme.ui, color: theme.color }}
     />
   );

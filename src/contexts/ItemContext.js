@@ -10,7 +10,7 @@ const ItemContextProvider = props => {
 
   const filterItems = value => {
     let filteredItems = items.filter(item => {
-      return item.name.toLowerCase().startsWith(value);
+      return item.name.toLowerCase().startsWith(value.toLowerCase());
     });
     setFilteredItems(filteredItems);
   };
