@@ -32,7 +32,7 @@ const STORE = [
   },
   {
     name: 'Macbook Pro',
-    status: 'Active',
+    status: 'Paused',
     percentSaved: 42,
     total: '$2,400',
     imgURL: 'http://pngimg.com/uploads/macbook/macbook_PNG9.png'

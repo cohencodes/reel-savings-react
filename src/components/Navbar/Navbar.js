@@ -22,30 +22,38 @@ const Navbar = () => {
 
   return (
     <nav style={{ background: theme.ui, color: theme.color }}>
-      <input
+      <button
         type="button"
         value={All}
         onClick={handleClick}
         className="nav-btn"
-      />
-      <input
+      >
+        All
+      </button>
+      <button
         type="button"
         value={Active}
         onClick={handleClick}
         className="nav-btn"
-      />
-      <input
+      >
+        Active
+      </button>
+      <button
         type="button"
         value={Paused}
         onClick={handleClick}
         className="nav-btn"
-      />
-      <input
+      >
+        Paused
+      </button>
+      <button
         type="button"
         value={Completed}
         onClick={handleClick}
         className="nav-btn"
-      />
+      >
+        Completed
+      </button>
       <SearchForm />
     </nav>
   );
