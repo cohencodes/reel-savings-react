@@ -1,4 +1,4 @@
-# Reel Savings Challenge
+# Reel App
 
 ### Live: https://reel-savings-react.cohencodes.now.sh/
 
