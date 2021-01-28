@@ -17,4 +17,4 @@ Savings app concept
 
 Deployed to Zeit
 
-Built by [@cohencodes](https://github.com/cohencodes)
+Built by [@aloncohenn](https://github.com/aloncohenn)
